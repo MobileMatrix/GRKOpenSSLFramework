@@ -67,10 +67,10 @@
 #ifndef HEADER_OCSP_H
 # define HEADER_OCSP_H
 
-# include <openssl/ossl_typ.h>
-# include <openssl/x509.h>
-# include <openssl/x509v3.h>
-# include <openssl/safestack.h>
+# include <CNIOOpenSSL/ossl_typ.h>
+# include <CNIOOpenSSL/x509.h>
+# include <CNIOOpenSSL/x509v3.h>
+# include <CNIOOpenSSL/safestack.h>
 
 #ifdef  __cplusplus
 extern "C" {

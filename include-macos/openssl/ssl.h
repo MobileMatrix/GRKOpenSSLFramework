@@ -143,28 +143,28 @@
 #ifndef HEADER_SSL_H
 # define HEADER_SSL_H
 
-# include <openssl/e_os2.h>
+# include <CNIOOpenSSL/e_os2.h>
 
 # ifndef OPENSSL_NO_COMP
-#  include <openssl/comp.h>
+#  include <CNIOOpenSSL/comp.h>
 # endif
 # ifndef OPENSSL_NO_BIO
-#  include <openssl/bio.h>
+#  include <CNIOOpenSSL/bio.h>
 # endif
 # ifndef OPENSSL_NO_DEPRECATED
 #  ifndef OPENSSL_NO_X509
-#   include <openssl/x509.h>
+#   include <CNIOOpenSSL/x509.h>
 #  endif
-#  include <openssl/crypto.h>
-#  include <openssl/lhash.h>
-#  include <openssl/buffer.h>
+#  include <CNIOOpenSSL/crypto.h>
+#  include <CNIOOpenSSL/lhash.h>
+#  include <CNIOOpenSSL/buffer.h>
 # endif
-# include <openssl/pem.h>
-# include <openssl/hmac.h>
+# include <CNIOOpenSSL/pem.h>
+# include <CNIOOpenSSL/hmac.h>
 
-# include <openssl/kssl.h>
-# include <openssl/safestack.h>
-# include <openssl/symhacks.h>
+# include <CNIOOpenSSL/kssl.h>
+# include <CNIOOpenSSL/safestack.h>
+# include <CNIOOpenSSL/symhacks.h>
 
 #ifdef  __cplusplus
 extern "C" {
@@ -1693,12 +1693,12 @@ struct ssl_st {
 }
 #endif
 
-# include <openssl/ssl2.h>
-# include <openssl/ssl3.h>
-# include <openssl/tls1.h>      /* This is mostly sslv3 with a few tweaks */
-# include <openssl/dtls1.h>     /* Datagram TLS */
-# include <openssl/ssl23.h>
-# include <openssl/srtp.h>      /* Support for the use_srtp extension */
+# include <CNIOOpenSSL/ssl2.h>
+# include <CNIOOpenSSL/ssl3.h>
+# include <CNIOOpenSSL/tls1.h>      /* This is mostly sslv3 with a few tweaks */
+# include <CNIOOpenSSL/dtls1.h>     /* Datagram TLS */
+# include <CNIOOpenSSL/ssl23.h>
+# include <CNIOOpenSSL/srtp.h>      /* Support for the use_srtp extension */
 
 #ifdef  __cplusplus
 extern "C" {

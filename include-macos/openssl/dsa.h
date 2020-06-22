@@ -65,22 +65,22 @@
 #ifndef HEADER_DSA_H
 # define HEADER_DSA_H
 
-# include <openssl/e_os2.h>
+# include <CNIOOpenSSL/e_os2.h>
 
 # ifdef OPENSSL_NO_DSA
 #  error DSA is disabled.
 # endif
 
 # ifndef OPENSSL_NO_BIO
-#  include <openssl/bio.h>
+#  include <CNIOOpenSSL/bio.h>
 # endif
-# include <openssl/crypto.h>
-# include <openssl/ossl_typ.h>
+# include <CNIOOpenSSL/crypto.h>
+# include <CNIOOpenSSL/ossl_typ.h>
 
 # ifndef OPENSSL_NO_DEPRECATED
-#  include <openssl/bn.h>
+#  include <CNIOOpenSSL/bn.h>
 #  ifndef OPENSSL_NO_DH
-#   include <openssl/dh.h>
+#   include <CNIOOpenSSL/dh.h>
 #  endif
 # endif
 

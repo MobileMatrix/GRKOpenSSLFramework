@@ -60,8 +60,8 @@
 #ifndef HEADER_PKCS12_H
 # define HEADER_PKCS12_H
 
-# include <openssl/bio.h>
-# include <openssl/x509.h>
+# include <CNIOOpenSSL/bio.h>
+# include <CNIOOpenSSL/x509.h>
 
 #ifdef __cplusplus
 extern "C" {

@@ -60,8 +60,8 @@
 # define HEADER_ASN1T_H
 
 # include <stddef.h>
-# include <openssl/e_os2.h>
-# include <openssl/asn1.h>
+# include <CNIOOpenSSL/e_os2.h>
+# include <CNIOOpenSSL/asn1.h>
 
 # ifdef OPENSSL_BUILD_SHLIBCRYPTO
 #  undef OPENSSL_EXTERN

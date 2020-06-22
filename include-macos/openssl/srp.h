@@ -69,9 +69,9 @@
 extern "C" {
 #endif
 
-#  include <openssl/safestack.h>
-#  include <openssl/bn.h>
-#  include <openssl/crypto.h>
+#  include <CNIOOpenSSL/safestack.h>
+#  include <CNIOOpenSSL/bn.h>
+#  include <CNIOOpenSSL/crypto.h>
 
 typedef struct SRP_gN_cache_st {
     char *b64_bn;

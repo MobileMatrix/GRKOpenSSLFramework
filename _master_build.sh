@@ -4,7 +4,7 @@
 #
 # This will:
 #   1. Build OpenSSL libraries for macOS and iOS using the `build.sh`
-#   2. Generate the `openssl.h` umbrella header for macOS and iOS based on the contents of
+#   2. Generate the `CNIOOpenSSL.h` umbrella header for macOS and iOS based on the contents of
 #      the `include-macos` and `include-ios` directories.
 #
 # Levi Brown
@@ -16,20 +16,20 @@
 
 OPENSSL_VERSION="1.0.2u"
 
-FRAMEWORK='openssl.framework'
-FRAMEWORK_BIN="${FRAMEWORK}/openssl"
-PODSPEC_FILE='./GRKOpenSSLFramework.podspec'
+FRAMEWORK='CNIOOpenSSL.framework'
+FRAMEWORK_BIN="${FRAMEWORK}/CNIOOpenSSL"
+PODSPEC_FILE='./CNIOOpenSSLFramework.podspec'
 
 # macOS configuration
-MAC_HEADER_DEST='OpenSSL-macOS/OpenSSL-macOS/openssl.h'
+MAC_HEADER_DEST='OpenSSL-macOS/OpenSSL-macOS/CNIOOpenSSL.h'
 MAC_HEADER_TEMPLATE='OpenSSL-macOS/OpenSSL-macOS/openssl_umbrella_template.h'
 MAC_INCLUDES_DIR='include-macos'
 MAC_LIB_DIR='lib-macos'
 MAC_BUILD_DIR='OpenSSL-macOS/bin'
 
 # iOS configuration
-IOS_HEADER_DEST='OpenSSL-iOS/OpenSSL-iOS/openssl.h'
-IOS_HEADER_TEMPLATE='OpenSSL-iOS/OpenSSL-iOS/openssl_umbrella_template.h'
+IOS_HEADER_DEST='OpenSSL-iOS/OpenSSL-iOS/CNIOOpenSSL.h'
+IOS_HEADER_TEMPLATE='OpenSSL-iOS/OpenSSL-iOS/CNIOOpenSSL_umbrella_template.h'
 IOS_INCLUDES_DIR='include-ios'
 IOS_LIB_DIR='lib-ios'
 IOS_BUILD_DIR='OpenSSL-iOS/bin'
@@ -50,7 +50,7 @@ function usage()
 	[[ "$@" = "" ]] || echo "$@" >&2
 	echo "Usage:" >&2
 	echo "$0 build|valid [ios|macos]|clean" >&2
-	echo "    build   Builds OpenSSL libraries from source." >&2
+	echo "    build   Builds CNIOOpenSSL libraries from source." >&2
 	echo "    header  Generates macOS and iOS umbrella headers." >&2
 	echo "    valid   Validates the frameworks." >&2
 	echo "    clean   Removes all build artifacts." >&2
@@ -68,10 +68,10 @@ function build()
 	export OSX_DEPLOYMENT_VERSION=$(echo "${PODSPEC}" | grep 's.osx.deployment_target' | sed -Ee "s|.*'(.+)'.*|\1|g")
 	export IPHONEOS_DEPLOYMENT_VERSION=$(echo "${PODSPEC}" | grep 's.ios.deployment_target' | sed -Ee "s|.*'(.+)'.*|\1|g")
 
-	# Build OpenSSL
-	echo "Building OpenSSL ${OPENSSL_VERSION}..."
+	# Build CNIOOpenSSL
+	echo "Building CNIOOpenSSL ${OPENSSL_VERSION}..."
 	source ./build.sh
-	echo "Finished building OpenSSL ${OPENSSL_VERSION}"
+	echo "Finished building CNIOOpenSSL ${OPENSSL_VERSION}"
 
 	header
 	

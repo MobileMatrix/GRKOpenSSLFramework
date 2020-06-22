@@ -1,0 +1,6 @@
+framework module CNIOOpenSSL {
+  umbrella header "CNIOOpenSSL.h"
+
+  export *
+  module * { export * }
+}

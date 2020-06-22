@@ -55,7 +55,7 @@
 #ifndef HEADER_SAFESTACK_H
 # define HEADER_SAFESTACK_H
 
-# include <openssl/stack.h>
+# include <CNIOOpenSSL/stack.h>
 
 #ifdef __cplusplus
 extern "C" {

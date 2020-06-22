@@ -80,9 +80,9 @@
 #ifndef HEADER_SEED_H
 # define HEADER_SEED_H
 
-# include <openssl/opensslconf.h>
-# include <openssl/e_os2.h>
-# include <openssl/crypto.h>
+# include <CNIOOpenSSL/opensslconf.h>
+# include <CNIOOpenSSL/e_os2.h>
+# include <CNIOOpenSSL/crypto.h>
 
 # ifdef OPENSSL_NO_SEED
 #  error SEED is disabled.

@@ -60,31 +60,31 @@
 #ifndef HEADER_TS_H
 # define HEADER_TS_H
 
-# include <openssl/opensslconf.h>
-# include <openssl/symhacks.h>
+# include <CNIOOpenSSL/opensslconf.h>
+# include <CNIOOpenSSL/symhacks.h>
 # ifndef OPENSSL_NO_BUFFER
-#  include <openssl/buffer.h>
+#  include <CNIOOpenSSL/buffer.h>
 # endif
 # ifndef OPENSSL_NO_EVP
-#  include <openssl/evp.h>
+#  include <CNIOOpenSSL/evp.h>
 # endif
 # ifndef OPENSSL_NO_BIO
-#  include <openssl/bio.h>
+#  include <CNIOOpenSSL/bio.h>
 # endif
-# include <openssl/stack.h>
-# include <openssl/asn1.h>
-# include <openssl/safestack.h>
+# include <CNIOOpenSSL/stack.h>
+# include <CNIOOpenSSL/asn1.h>
+# include <CNIOOpenSSL/safestack.h>
 
 # ifndef OPENSSL_NO_RSA
-#  include <openssl/rsa.h>
+#  include <CNIOOpenSSL/rsa.h>
 # endif
 
 # ifndef OPENSSL_NO_DSA
-#  include <openssl/dsa.h>
+#  include <CNIOOpenSSL/dsa.h>
 # endif
 
 # ifndef OPENSSL_NO_DH
-#  include <openssl/dh.h>
+#  include <CNIOOpenSSL/dh.h>
 # endif
 
 #ifdef  __cplusplus
@@ -96,8 +96,8 @@ extern "C" {
 #  undef X509_NAME
 # endif
 
-# include <openssl/x509.h>
-# include <openssl/x509v3.h>
+# include <CNIOOpenSSL/x509.h>
+# include <CNIOOpenSSL/x509v3.h>
 
 /*-
 MessageImprint ::= SEQUENCE  {

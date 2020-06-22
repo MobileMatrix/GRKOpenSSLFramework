@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C71BFA051D395F47006DBF18 /* openssl.h in Headers */ = {isa = PBXBuildFile; fileRef = C71BFA041D395F47006DBF18 /* openssl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBF2B55524A0A61B005648CF /* shims.c in Sources */ = {isa = PBXBuildFile; fileRef = BBF2B55424A0A61B005648CF /* shims.c */; };
+		BBF2B55724A0A688005648CF /* helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = BBF2B55624A0A688005648CF /* helpers.c */; };
+		C71BFA051D395F47006DBF18 /* CNIOOpenSSL.h in Headers */ = {isa = PBXBuildFile; fileRef = C71BFA041D395F47006DBF18 /* CNIOOpenSSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB6EAD631F620AEF00CC0B1E /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = DB6EAD171F620AEF00CC0B1E /* aes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB6EAD641F620AEF00CC0B1E /* asn1.h in Headers */ = {isa = PBXBuildFile; fileRef = DB6EAD181F620AEF00CC0B1E /* asn1.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB6EAD651F620AEF00CC0B1E /* asn1_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = DB6EAD191F620AEF00CC0B1E /* asn1_mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,8 +90,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C71BFA011D395F47006DBF18 /* openssl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = openssl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C71BFA041D395F47006DBF18 /* openssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = openssl.h; sourceTree = "<group>"; };
+		BBF2B55424A0A61B005648CF /* shims.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = shims.c; sourceTree = "<group>"; };
+		BBF2B55624A0A688005648CF /* helpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = helpers.c; sourceTree = "<group>"; };
+		C71BFA011D395F47006DBF18 /* CNIOOpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CNIOOpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C71BFA041D395F47006DBF18 /* CNIOOpenSSL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNIOOpenSSL.h; sourceTree = "<group>"; };
 		C71BFA061D395F47006DBF18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C71BFABE1D3961CD006DBF18 /* build-framework-ios.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-framework-ios.sh"; sourceTree = "<group>"; };
 		DB6EAD171F620AEF00CC0B1E /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
@@ -169,7 +173,7 @@
 		DB6EAD621F620AEF00CC0B1E /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
 		DB6EADB01F620B0800CC0B1E /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		DB6EADB11F620B0800CC0B1E /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
-		DB6EADB51F62119800CC0B1E /* openssl_umbrella_template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openssl_umbrella_template.h; sourceTree = "<group>"; };
+		DB6EADB51F62119800CC0B1E /* CNIOOpenSSL_umbrella_template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNIOOpenSSL_umbrella_template.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +200,7 @@
 		C71BFA021D395F47006DBF18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C71BFA011D395F47006DBF18 /* openssl.framework */,
+				C71BFA011D395F47006DBF18 /* CNIOOpenSSL.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,8 +210,10 @@
 			children = (
 				DB6EADAF1F620B0800CC0B1E /* lib-ios */,
 				DB6EAD151F620AEF00CC0B1E /* include-ios */,
-				C71BFA041D395F47006DBF18 /* openssl.h */,
-				DB6EADB51F62119800CC0B1E /* openssl_umbrella_template.h */,
+				C71BFA041D395F47006DBF18 /* CNIOOpenSSL.h */,
+				DB6EADB51F62119800CC0B1E /* CNIOOpenSSL_umbrella_template.h */,
+				BBF2B55624A0A688005648CF /* helpers.c */,
+				BBF2B55424A0A61B005648CF /* shims.c */,
 				C71BFA061D395F47006DBF18 /* Info.plist */,
 				C71BFABE1D3961CD006DBF18 /* build-framework-ios.sh */,
 			);
@@ -217,13 +223,13 @@
 		DB6EAD151F620AEF00CC0B1E /* include-ios */ = {
 			isa = PBXGroup;
 			children = (
-				DB6EAD161F620AEF00CC0B1E /* openssl */,
+				DB6EAD161F620AEF00CC0B1E /* CNIOOpenSSL */,
 			);
 			name = "include-ios";
 			path = "../../include-ios";
 			sourceTree = "<group>";
 		};
-		DB6EAD161F620AEF00CC0B1E /* openssl */ = {
+		DB6EAD161F620AEF00CC0B1E /* CNIOOpenSSL */ = {
 			isa = PBXGroup;
 			children = (
 				DB6EAD171F620AEF00CC0B1E /* aes.h */,
@@ -302,7 +308,7 @@
 				DB6EAD611F620AEF00CC0B1E /* x509_vfy.h */,
 				DB6EAD621F620AEF00CC0B1E /* x509v3.h */,
 			);
-			path = openssl;
+			path = CNIOOpenSSL;
 			sourceTree = "<group>";
 		};
 		DB6EADAF1F620B0800CC0B1E /* lib-ios */ = {
@@ -377,7 +383,7 @@
 				DB6EAD671F620AEF00CC0B1E /* bio.h in Headers */,
 				DB6EAD7A1F620AEF00CC0B1E /* ebcdic.h in Headers */,
 				DB6EAD751F620AEF00CC0B1E /* dh.h in Headers */,
-				C71BFA051D395F47006DBF18 /* openssl.h in Headers */,
+				C71BFA051D395F47006DBF18 /* CNIOOpenSSL.h in Headers */,
 				DB6EAD651F620AEF00CC0B1E /* asn1_mac.h in Headers */,
 				DB6EAD731F620AEF00CC0B1E /* des.h in Headers */,
 				DB6EAD831F620AEF00CC0B1E /* krb5_asn.h in Headers */,
@@ -404,9 +410,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C71BFA001D395F47006DBF18 /* openssl */ = {
+		C71BFA001D395F47006DBF18 /* CNIOOpenSSL */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C71BFA091D395F47006DBF18 /* Build configuration list for PBXNativeTarget "openssl" */;
+			buildConfigurationList = C71BFA091D395F47006DBF18 /* Build configuration list for PBXNativeTarget "CNIOOpenSSL" */;
 			buildPhases = (
 				C71BF9FC1D395F47006DBF18 /* Sources */,
 				C71BF9FD1D395F47006DBF18 /* Frameworks */,
@@ -418,9 +424,9 @@
 			);
 			dependencies = (
 			);
-			name = openssl;
+			name = CNIOOpenSSL;
 			productName = "OpenSSL-iOS";
-			productReference = C71BFA011D395F47006DBF18 /* openssl.framework */;
+			productReference = C71BFA011D395F47006DBF18 /* CNIOOpenSSL.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -450,7 +456,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C71BFA001D395F47006DBF18 /* openssl */,
+				C71BFA001D395F47006DBF18 /* CNIOOpenSSL */,
 			);
 		};
 /* End PBXProject section */
@@ -487,6 +493,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBF2B55524A0A61B005648CF /* shims.c in Sources */,
+				BBF2B55724A0A688005648CF /* helpers.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,7 +674,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C71BFA091D395F47006DBF18 /* Build configuration list for PBXNativeTarget "openssl" */ = {
+		C71BFA091D395F47006DBF18 /* Build configuration list for PBXNativeTarget "CNIOOpenSSL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C71BFA0A1D395F47006DBF18 /* Debug */,
